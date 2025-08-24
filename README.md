@@ -12,3 +12,6 @@ It adds interactivity to the website wherein appropriate data is fetched upon cl
 
 **Task 4:**
 It implemets static typing and modular code with initialisation of TypeScript.
+
+**Task 5:**
+This features the UI built as a react application.
