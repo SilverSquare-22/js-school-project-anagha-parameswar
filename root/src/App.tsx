@@ -1,20 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../src/components/Header";
 import Timeline from "../src/components/Timeline";
 import EventModal from "../src/components/EventModal";
 import { EventData } from "../src/types/EventData";
 
-import eventsData from "../public/data/events.json";
-
 function App() {
-  const [events] = useState<EventData[]>(eventsData);
+  const [events, setEvents] = useState<EventData[]>([]);
   const [selectedEvent, setSelectedEvent] = useState<EventData | null>(null);
+
+  useEffect(() => {
+    fetch("/data/events.json")
+      .then((res) => res.json())
+      .then((data) => setEvents(data));
+  }, []);
 
   return (
     <div>
       <Header />
 
       <main>
+
         <section id="intro">
           <h2>History of Computer</h2>
           <p>
@@ -98,8 +103,8 @@ function App() {
             <h3>Fifth Generation (Present):</h3>
             This generation features Artificial Intelligence which is capable of
             understanding natural language. The applications include speech
-            recognition, translation, entertainment etc. These computers are the
-            most efficient ones in terms of speed, accuracy and reliability.
+            recognition, translation, entertainment etc. These computers are the most
+            efficient ones in terms of speed, accuracy and reliability.
           </div>
         </article>
       </main>

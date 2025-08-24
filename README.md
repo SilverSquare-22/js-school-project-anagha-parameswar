@@ -15,3 +15,10 @@ It implemets static typing and modular code with initialisation of TypeScript.
 
 **Task 5:**
 This features the UI built as a react application.
+
+**Task 6:**
+This task ensures the website is accessible to everyone consisting of ARIA roles, WCAG requirements etc.
+
+---
+## Documentation
+[Accessibility Report](./ACCESSIBILITY.md)
