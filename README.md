@@ -6,3 +6,6 @@ It involves the creation of a static skeleton for a timeline app using HTML, con
 
 **Task 2:**
 This includes giving the HTML file a structured and polished layout implementing the flexbox model, typography, colour-scheme as well as a design that adapts to the screens of various dimensions.
+
+**Task 3:**
+It adds interactivity to the website wherein appropriate data is fetched upon clicking the modals.
