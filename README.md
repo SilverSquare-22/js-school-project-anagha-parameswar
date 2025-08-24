@@ -9,3 +9,6 @@ This includes giving the HTML file a structured and polished layout implementing
 
 **Task 3:**
 It adds interactivity to the website wherein appropriate data is fetched upon clicking the modals.
+
+**Task 4:**
+It implemets static typing and modular code with initialisation of TypeScript.

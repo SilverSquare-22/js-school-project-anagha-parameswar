@@ -1,6 +1,27 @@
 body {
     font-size: 25px;
     background-color: #0066ff;
+} body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+} body.dark-theme header { color: #f5f5f5; }
+body.dark-theme #timeline { background-color: #444; }
+body.dark-theme .event-marker {
+    background-color: #ffa500;
+    color: #1e1e1e;
+} body.dark-theme #intro,
+body.dark-theme #gen,
+body.dark-theme footer {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #f5f5f5;
+    border-color: #666;
+} body.dark-theme #modal {
+    background-color: #333;
+    color: #f5f5f5;
+    border-color: #888;
+} body.dark-theme button {
+    background-color: #f5f5f5;
+    color: #1e1e1e;
 } header {
     color: white;
     display: flex;
@@ -13,50 +34,63 @@ body {
     margin-top: 15px;
     border: 2px solid black;
     border-radius: 25%;
-} button {
-    font-size: 15px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 15%;
+} #theme-toggle {
+    font-size: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ffea95, #ffc107);
+    color: #1e1e1e;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+} #theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+} #theme-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 } #intro {
     text-align: justify;
     background-color: rgba(255, 253, 240, 0.9);
     padding: 45px 60px 45px 60px;
     margin: 0px 40px 25px 40px;
     border: 3px solid black;
-    border-radius: 15%;
+    border-radius: 100px;
 } #time {
     text-align: center;
     color: white;
     margin-top: 60px;
 } #timeline {
-    background-color: rgb(110, 55, 0);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 4px;
-    margin: 40px 0px 60px 0px;
-} .event-marker {
+    background-color: rgb(110, 55, 0);
+    margin: 60px auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    font-size: 20px;
+} .event-marker {
+    font-size: 18px;
     width: 50px;
     height: 50px;
-    color:rgb(110, 55, 0);
     background-color: #ffea95;
+    color: rgb(110, 55, 0);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
     cursor: pointer;
-    margin: 40px 0px 50px 0px;
-    padding: 0px 5px 0px 5px;
+    position: relative;
+    z-index: 2;
 } #modal {
     display: none;
     position: fixed;
-    font-size: 20px;
-    top: 50%; left: 50%;
-    transform: translate (-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: rgb(240, 255, 110);
     padding: 20px;
     border: 2px solid #ccc;
@@ -65,45 +99,6 @@ body {
     cursor: pointer;
     float: right;
     font-weight: bold;
-} #timeline {
-    border: 5px solid black;
-    background-color: rgba(240, 248, 255, 0.9);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    padding: 10px 25px 10px 25px;
-    margin: 0px 45px 0px 45px;
-} #timeline::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.75);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    z-index: 1;
-} .year {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    top: 50%;
-    position: relative;
-    z-index: 2;
-    border: 3px solid black;
-    background-color: blanchedalmond;
-} .tcontent {
-    font-size: 20px;
-    text-align: justify;
-    position: relative;
-} .bcontent {
-    font-size: 20px;
-    text-align: justify;
-    position: relative;
 } #gen {
     text-align: justify;
     background-color: rgba(255, 253, 240, 0.9);
@@ -132,15 +127,19 @@ body {
     #timeline {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        left: 50%;
+        justify-content: space-around;
         width: 4px;
-        height: 1000px;
+        height: 700px;
     } .event-marker {
-        font-size: 15px;
-        width: 50px;
-        height: 50px;
+        font-size: 13px;
+        width: 45px;
+        height: 45px;
     } #modal {font-size: 15px;}
 } @media (min-width: 1024px) {
     body {font-size: 25px;}
+    .event-marker {
+        font-size: 20px;
+        width: 55px;
+        height: 55px;
+    }
 }
