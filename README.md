@@ -21,4 +21,4 @@ This task ensures the website is accessible to everyone consisting of ARIA roles
 
 ---
 ## Documentation
-- [Accessibility Report](./ACCESSIBILITY.md)
+[Accessibility Report](./ACCESSIBILITY.md)
